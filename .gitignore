@@ -151,6 +151,7 @@ ipch/
 # Visual Studio Trace Files
 *.e2e
 
+
 # TFS 2012 Local Workspace
 $tf/
 
@@ -270,6 +271,13 @@ ClientBin/
 *.pfx
 *.publishsettings
 orleans.codegen.cs
+
+# App runtime data (gerado em tempo de execucao, nao deve ser versionado)
+*.db
+*.db-shm
+*.db-wal
+*.log
+log.txt
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
 # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
