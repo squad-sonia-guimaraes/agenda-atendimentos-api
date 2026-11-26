@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using AgendaAtendimentos.Data;
+using AgendaAtendimentos.Repositories;
+using AgendaAtendimentos.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,9 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
     ?? throw new InvalidOperationException("A connection string 'DefaultConnection' não foi configurada.");
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(connectionString));
+
+// Registro dos Repositories
+builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 
 // Configuração dos serviços
 builder.Services.AddControllers();
