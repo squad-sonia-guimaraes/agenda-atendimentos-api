@@ -9,6 +9,9 @@ public class Cliente
 
     public int ProfissionalId { get; set; }
 
+    // TODO: Configurar o relacionamento com Profissional quando estiver disponível
+    // public Profissional Profissional { get; set; } = null!;
+
     [Required(ErrorMessage = "O nome do cliente é um campo obrigatório.")]
     [StringLength(100, MinimumLength = 2)]
     public string NomeCliente { get; set; } = string.Empty;
