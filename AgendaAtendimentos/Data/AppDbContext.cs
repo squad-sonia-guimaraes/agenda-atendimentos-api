@@ -1,3 +1,4 @@
+using AgendaAtendimentos.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace AgendaAtendimentos.Data;
@@ -8,4 +9,6 @@ public class AppDbContext : DbContext
         : base(options)
     {
     }
+
+    public DbSet<Expediente> Expedientes { get; set; }
 }
